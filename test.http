@@ -1,0 +1,65 @@
+### Create new memo
+POST http://localhost:8080/api/board/new
+Content-Type: application/json
+
+{
+  "title" : "title",
+  "content" : "this is content",
+  "password" : "password",
+  "writer" : "hyelin"
+}
+
+### Get List
+GET http://localhost:8080/api/board
+
+### Get One
+GET http://localhost:8080/api/board/152
+
+### Update One
+PUT http://localhost:8080/api/board/1/edit
+Content-Type: application/json
+
+{
+  "password" : "password",
+  "content" : "new_conten4",
+  "title" : "new_title4"
+
+}
+
+### Update One
+PUT http://localhost:8080/api/board/1/edit
+Content-Type: application/json
+
+{
+  "password" : "password",
+  "content" : "new_content3"
+}
+
+### Update One
+PUT http://localhost:8080/api/board/1/edit
+Content-Type: application/json
+
+{
+  "password" : "password",
+  "title" : "new_title1"
+
+}
+
+### Update One - fail -password
+PUT http://localhost:8080/api/board/1/edit
+Content-Type: application/json
+
+{
+  "password" : "password1",
+  "content" : "new_content",
+  "title" : "new_title"
+
+}
+
+### delete one
+POST http://localhost:8080/api/board/152/delete
+Content-Type: application/json
+
+{
+  "password": "password"
+}
